@@ -29,6 +29,7 @@ pipeline {
         }
 
     }
-    echo 'Finished Running Program'
+
 
 }
+echo 'Finished Running Program'
