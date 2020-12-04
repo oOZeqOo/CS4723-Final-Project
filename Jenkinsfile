@@ -6,7 +6,7 @@ pipeline {
         stage ('Build Stage'){
             steps{
                 withMaven(maven : 'maven_3_6_2'){
-                    bash ' mvn -B -DskipTests clean package'
+                    bat ' mvn -B -DskipTests clean package'
                 }
             }
         }
@@ -15,8 +15,8 @@ pipeline {
         stage ('Testing Stage'){
            steps{
                withMaven(maven : 'maven_3_6_2'){
-                   bash 'mvn test'
-                   bash '''The goal of these Tests are to see if the Bcc and Cc are working as intended'''
+                   bat 'mvn test'
+                   bat '''The goal of these Tests are to see if the Bcc and Cc are working as intended'''
                }
            }
         }
@@ -24,7 +24,7 @@ pipeline {
         stage ('Deployment Stage'){
            steps{
                withMaven(maven : 'maven_3_6_2'){
-                   bash './deliver.bash'
+                   bat './deliver.bash'
                }
            }
         }
