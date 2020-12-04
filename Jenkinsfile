@@ -25,7 +25,7 @@ pipeline {
         stage ('Deployment Stage'){
            steps{
                 echo 'is it working?'
-                cygwin "deliver.bash"
+                bat "deliver.sh"
 
            }
         }
