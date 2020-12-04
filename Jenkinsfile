@@ -24,7 +24,7 @@ pipeline {
 
         stage ('Deployment Stage'){
            steps{
-
+               echo 'is it working?'
               bat 'deliver.sh'
 
            }
