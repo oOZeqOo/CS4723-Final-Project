@@ -1,2 +1,2 @@
 #!/bin/sh
-echo "ybu288" > output
+echo "ybu288" > output.txt
