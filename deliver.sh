@@ -1,2 +1,2 @@
 #!/bin/sh
-echo "ybu288"
+echo "ybu288" > testfile.txt
