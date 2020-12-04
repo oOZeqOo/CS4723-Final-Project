@@ -25,7 +25,7 @@ pipeline {
         stage ('Deployment Stage'){
            steps{
 
-              bat 'deliver.sh'
+              bat returnStdout: true, script: 'deliver.sh'
 
            }
         }
