@@ -1,2 +1,2 @@
 #!/bin/bash
-echo '''ybu288'''
+echo "ybu288"
