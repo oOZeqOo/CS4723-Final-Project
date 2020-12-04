@@ -6,7 +6,7 @@ pipeline {
         stage ('Build Stage'){
             steps{
                 withMaven(maven : 'maven_3_6_2'){
-                    echo ' mvn -B -DskipTests clean package'
+                    bash ' mvn -B -DskipTests clean package'
                 }
             }
         }
@@ -15,8 +15,8 @@ pipeline {
         stage ('Testing Stage'){
            steps{
                withMaven(maven : 'maven_3_6_2'){
-                   echo 'mvn test'
-                   echo '''The goal of these Tests are to see if the Bcc and Cc are working as intended'''
+                   bash 'mvn test'
+                   bash '''The goal of these Tests are to see if the Bcc and Cc are working as intended'''
                }
            }
         }
@@ -24,9 +24,7 @@ pipeline {
         stage ('Deployment Stage'){
            steps{
                withMaven(maven : 'maven_3_6_2'){
-                   echo 'mvn deploy'
-                   echo './deliver.bash'
-                   echo '''ybu288'''
+                   bash './deliver.bash'
                }
            }
         }
