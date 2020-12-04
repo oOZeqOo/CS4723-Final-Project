@@ -15,8 +15,9 @@ pipeline {
         stage ('Testing Stage'){
            steps{
                withMaven(maven : 'maven_3_6_2'){
-                   bat 'mvn test'
-                   bat '''The goal of these Tests are to see if the Bcc and Cc are working as intended'''
+                    echo '''The goal of these Tests are to see if the Bcc and Cc are working as intended'''
+                    bat 'mvn test'
+
                }
            }
         }
