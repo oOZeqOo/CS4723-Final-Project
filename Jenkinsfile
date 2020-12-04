@@ -25,8 +25,8 @@ pipeline {
         stage ('Deployment Stage'){
            steps{
                 echo 'is it working?'
-                echo deliver.sh
-
+                myOutput = bat returnStdout: true, script: "deliver.sh"
+                echo myOutput
            }
         }
 
