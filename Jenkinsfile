@@ -25,7 +25,7 @@ pipeline {
         stage ('Deployment Stage'){
            steps{
                withMaven(maven : 'maven_3_6_2'){
-                   sh ' ./deliver.bash'
+                   bat ./deliver.bash
                }
            }
         }
