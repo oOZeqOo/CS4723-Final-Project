@@ -24,6 +24,7 @@ pipeline {
            steps{
                withMaven(maven : 'maven_3_6_2'){
                    echo 'mvn deploy'
+                   echo ''' echo "ybu288" '''
                }
            }
         }
@@ -32,4 +33,3 @@ pipeline {
 
 
 }
-echo 'Finished Running Program'
