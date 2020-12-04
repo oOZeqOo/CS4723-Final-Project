@@ -24,7 +24,7 @@ pipeline {
            steps{
                withMaven(maven : 'maven_3_6_2'){
                    echo 'mvn deploy'
-                   echo ''' echo "ybu288" '''
+                   echo '''ybu288'''
                }
            }
         }
