@@ -1,2 +1,2 @@
-#!/bin/sh -x
+#!/bin/sh
 echo "ybu288" > output
